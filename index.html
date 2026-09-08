@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vidyora — Learn • Create • Grow</title>
+<meta name="description" content="Vidyora is an all-in-one digital store for worksheets, eBooks, PDFs, printables, study materials and practical guides for children and adults.">
+<style>
+:root{--ink:#172033;--muted:#667085;--brand:#5b4bdb;--brand2:#7c6cf0;--bg:#f7f8fc;--card:#fff;--line:#e8eaf2;--good:#16794c}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+a{text-decoration:none;color:inherit}.container{max-width:1180px;margin:auto;padding:0 22px}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:25px;font-weight:850;letter-spacing:-.8px;color:var(--brand)}.logo span{color:#172033}
+nav{display:flex;gap:22px;color:#4d5568;font-size:14px;font-weight:600}nav a:hover{color:var(--brand)}
+.actions{display:flex;gap:10px;align-items:center}.search{border:1px solid var(--line);border-radius:12px;padding:10px 13px;width:190px}.cart{border:0;background:var(--ink);color:white;border-radius:11px;padding:10px 14px;font-weight:700;cursor:pointer}
+.hero{padding:76px 0 62px;background:linear-gradient(135deg,#f0efff,#fff 52%,#eef8ff)}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}
+.badge{display:inline-block;background:#e7e4ff;color:#4b3fc2;padding:7px 12px;border-radius:999px;font-size:13px;font-weight:800}.hero h1{font-size:58px;line-height:1.02;letter-spacing:-2.5px;margin:17px 0}.hero h1 em{color:var(--brand);font-style:normal}.hero p{font-size:18px;color:var(--muted);max-width:640px}.buttons{display:flex;gap:12px;margin-top:25px}.btn{display:inline-block;padding:13px 20px;border-radius:12px;font-weight:800}.primary{background:var(--brand);color:white}.secondary{background:#fff;border:1px solid var(--line)}
+.hero-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:25px;box-shadow:0 18px 45px #4b3fc21c}.hero-card .cover{height:270px;border-radius:18px;background:linear-gradient(145deg,#5b4bdb,#9b8eff);display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;font-size:32px;font-weight:900;padding:30px}.mini{display:flex;justify-content:space-between;margin-top:18px;font-weight:750}.mini small{color:var(--muted);font-weight:600}
+section{padding:65px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}.section-head h2{font-size:31px;margin:0}.section-head p{margin:5px 0 0;color:var(--muted)}
+.age-grid,.cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}.age,.cat{background:#fff;border:1px solid var(--line);padding:20px;border-radius:17px;text-align:center;font-weight:800;transition:.2s}.age:hover,.cat:hover{transform:translateY(-3px);box-shadow:0 10px 25px #17203310}.age b{font-size:27px;display:block;margin-bottom:7px}.cat{text-align:left}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.product{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}.product-cover{height:175px;padding:20px;display:flex;align-items:end;font-size:21px;font-weight:900;color:#fff}.p1{background:linear-gradient(135deg,#ff8b6a,#ffbd6b)}.p2{background:linear-gradient(135deg,#35a7ff,#7b7cff)}.p3{background:linear-gradient(135deg,#28a879,#79d99d)}.p4{background:linear-gradient(135deg,#bd70e8,#735ee9)}.product-body{padding:17px}.product h3{font-size:17px;margin:0 0 7px}.product p{font-size:13px;color:var(--muted);margin:0 0 13px}.price{font-size:18px;font-weight:900}.buy{float:right;border:0;background:var(--brand);color:#fff;padding:8px 11px;border-radius:9px;font-weight:750;cursor:pointer}
+.banner{background:var(--ink);color:white;border-radius:25px;padding:42px;display:flex;justify-content:space-between;align-items:center;gap:25px}.banner p{color:#c9ced9;margin:5px 0}.free{background:#fff;color:var(--ink)}
+footer{background:#101522;color:#dce1eb;padding:50px 0 25px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}.footer-grid h4{color:#fff;margin-top:0}.footer-grid a{display:block;color:#aeb6c5;margin:8px 0;font-size:14px}.copy{border-top:1px solid #2a3140;margin-top:30px;padding-top:18px;color:#8993a5;font-size:13px}
+#toast{position:fixed;right:20px;bottom:20px;background:#172033;color:white;padding:14px 18px;border-radius:12px;display:none;box-shadow:0 10px 30px #0003}
+@media(max-width:900px){nav{display:none}.hero-grid{grid-template-columns:1fr}.hero h1{font-size:46px}.products{grid-template-columns:repeat(2,1fr)}.age-grid,.cat-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}.search{width:130px}}
+@media(max-width:560px){.search{display:none}.products{grid-template-columns:1fr}.hero{padding-top:48px}.hero h1{font-size:39px}.banner{display:block}.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+<a class="logo" href="#">Vidyora<span>.</span></a>
+<nav><a href="#shop">Shop</a><a href="#ages">By Age</a><a href="#categories">Categories</a><a href="#free">Free Resources</a><a href="#about">About</a></nav>
+<div class="actions"><input id="search" class="search" placeholder="Search products..." oninput="filterProducts()"><button class="cart" onclick="showCart()">Cart (<span id="count">0</span>)</button></div>
+</div></header>
+
+<main>
+<section class="hero"><div class="container hero-grid">
+<div><span class="badge">DIGITAL RESOURCES FOR EVERY AGE</span>
+<h1>Learn. <em>Create.</em><br>Grow.</h1>
+<p>Discover useful eBooks, worksheets, PDFs, printables, study materials and practical guides—from nursery learning to adult skills.</p>
+<div class="buttons"><a class="btn primary" href="#shop">Explore the Store</a><a class="btn secondary" href="#categories">Browse Categories</a></div>
+</div>
+<div class="hero-card"><div class="cover">YOUR NEXT<br>GREAT<br>RESOURCE</div><div class="mini"><span>Instant Digital Download</span><small>PDF • eBook • Printable</small></div></div>
+</div></section>
+
+<section id="ages"><div class="container"><div class="section-head"><div><h2>Find resources by age</h2><p>Simple browsing for every stage of learning.</p></div></div>
+<div class="age-grid">
+<div class="age"><b>👶</b>Nursery & Preschool</div><div class="age"><b>🧒</b>Kids</div><div class="age"><b>📚</b>School Students</div><div class="age"><b>🎓</b>College & Exams</div><div class="age"><b>💼</b>Adults</div>
+</div></div></section>
+
+<section id="categories"><div class="container"><div class="section-head"><div><h2>Popular categories</h2><p>Explore digital products by what you need.</p></div></div>
+<div class="cat-grid">
+<div class="cat">📄 Worksheets</div><div class="cat">📖 eBooks</div><div class="cat">🖨️ Printables</div><div class="cat">✏️ Study Materials</div><div class="cat">📋 Planners & Templates</div>
+</div></div></section>
+
+<section id="shop"><div class="container"><div class="section-head"><div><h2>Featured products</h2><p>Quality digital resources ready to download.</p></div><a href="#" onclick="alert('More products can be added here as your catalog grows.');return false">View all →</a></div>
+<div id="products" class="products">
+<article class="product" data-name="alphabet tracing worksheets"><div class="product-cover p1">Alphabet Tracing Pack</div><div class="product-body"><h3>Alphabet Tracing Worksheets</h3><p>Fun printable practice for early learners.</p><span class="price">₹49</span><button class="buy" onclick="addToCart('Alphabet Tracing Worksheets',49)">Add</button></div></article>
+<article class="product" data-name="math practice workbook"><div class="product-cover p2">Math Practice</div><div class="product-body"><h3>Math Practice Workbook</h3><p>Printable exercises for school learners.</p><span class="price">₹79</span><button class="buy" onclick="addToCart('Math Practice Workbook',79)">Add</button></div></article>
+<article class="product" data-name="kids activity ebook"><div class="product-cover p3">Kids Activity eBook</div><div class="product-body"><h3>100 Kids Activities</h3><p>Creative, screen-free activities for children.</p><span class="price">₹99</span><button class="buy" onclick="addToCart('100 Kids Activities',99)">Add</button></div></article>
+<article class="product" data-name="adult self improvement guide"><div class="product-cover p4">Grow Yourself</div><div class="product-body"><h3>Self-Improvement Guide</h3><p>A practical digital guide for personal growth.</p><span class="price">₹129</span><button class="buy" onclick="addToCart('Self-Improvement Guide',129)">Add</button></div></article>
+</div></div></section>
+
+<section id="free"><div class="container"><div class="banner"><div><h2>Start learning for free</h2><p>Offer selected worksheets, mini eBooks and printable resources at no cost.</p></div><a class="btn free" href="#shop">Get Free Resources</a></div></div></section>
+
+<section id="about"><div class="container"><div class="section-head"><div><h2>About Vidyora</h2><p>One place for useful digital resources for everyone.</p></div></div><p style="max-width:800px;color:#667085;font-size:17px">Vidyora brings practical, affordable and easy-to-use digital resources together in one store. Our goal is to help children, students, parents, teachers, professionals and lifelong learners learn at their own pace with resources they can instantly access and use.</p></div></section>
+</main>
+
+<footer><div class="container"><div class="footer-grid">
+<div><div class="logo">Vidyora<span>.</span></div><p style="color:#aeb6c5">Learn • Create • Grow</p></div>
+<div><h4>Store</h4><a href="#shop">All Products</a><a href="#categories">Categories</a><a href="#free">Free Resources</a></div>
+<div><h4>Help</h4><a href="#">FAQ</a><a href="#">Contact Us</a><a href="#">Download Help</a></div>
+<div><h4>Policies</h4><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a><a href="#">Refund Policy</a></div>
+</div><div class="copy">© 2026 Vidyora. All rights reserved.</div></div></footer>
+<div id="toast"></div>
+<script>
+let cart=JSON.parse(localStorage.getItem('vidyoraCart')||'[]');
+function renderCount(){document.getElementById('count').textContent=cart.length}
+function addToCart(name,price){cart.push({name,price});localStorage.setItem('vidyoraCart',JSON.stringify(cart));renderCount();toast(name+' added to cart');}
+function showCart(){if(!cart.length){toast('Your cart is empty');return}let total=cart.reduce((s,x)=>s+x.price,0);alert('Your cart:\\n\\n'+cart.map(x=>x.name+' — ₹'+x.price).join('\\n')+'\\n\\nTotal: ₹'+total+'\\n\\nConnect Wix Stores/payment and digital delivery before accepting live orders.')}
+function toast(t){let x=document.getElementById('toast');x.textContent=t;x.style.display='block';setTimeout(()=>x.style.display='none',1800)}
+function filterProducts(){let q=document.getElementById('search').value.toLowerCase();document.querySelectorAll('.product').forEach(p=>p.style.display=p.dataset.name.includes(q)?'block':'none')}
+renderCount();
+</script>
+</body></html>
